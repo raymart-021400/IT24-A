@@ -105,3 +105,4 @@ updateLogDisplay() {
     this.displayLogCount();
 }
 }
+const Mymap = new LeafletMap('map', [8.359735, 124.869206], 18);
