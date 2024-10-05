@@ -11,6 +11,9 @@ class LeafletMap{
         this.markerCounts = {};
         this.markers = [];
 
+        this.loggedData = []; 
+
+
 }
 initTileLayer() {
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
