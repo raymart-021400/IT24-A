@@ -56,4 +56,22 @@ loadMarkersFromJson(url) {
     })
     .catch(error => console.error("Error Loading servers:", error));
 }
+
+clearLogs(){
+    this.attendanceCountSC = 0;
+    this.attendanceCountBA = 0;
+    this.attendanceCountLab = 0;
+
+    this.loggedData = [];
+    this.markerCounts = {}; 
+    this.markers.forEach(marker => {
+        const message = marker.getPopup().getContent().split('<br>')[0]; 
+        this.markerCounts[message] = 0;
+        this.updateMarkerPopup(marker, message); 
+    });
+    this.markers.forEach(marker => {
+        this.map.removeLayer(marker);
+    });
+    this.updateLogDisplay();
+}
 }
