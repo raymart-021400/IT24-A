@@ -8,6 +8,9 @@ class LeafletMap{
         this.attendanceCountBA = 0;
         this.attendanceCountLab = 0;
 
+        this.markerCounts = {};
+        this.markers = [];
+
 }
 initTileLayer() {
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
