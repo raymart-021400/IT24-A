@@ -40,5 +40,6 @@ addMarker(lat, long, message){
         this.markerCounts[message]++;
         this.updateMarkerPopup(marker, message);
     });
+this.markers.push(marker);
 }
 }
