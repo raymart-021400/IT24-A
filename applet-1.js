@@ -54,5 +54,6 @@ loadMarkersFromJson(url) {
             this.addMarker(marker.latitude, marker.longitude, marker.message);
         });
     })
+    .catch(error => console.error("Error Loading servers:", error));
 }
 }
