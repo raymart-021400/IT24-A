@@ -1,0 +1,26 @@
+[
+    {
+      "student_id": 1,
+      "student_name": "Raymart Avancena",
+      "student_program": "BS-Computer Science",
+      "student_enrolled_date": "2023-01-15"
+    },
+    {
+      "student_id": 2,
+      "student_name": "Sander Perejan",
+      "student_program": "BS-Computer Engineering",
+      "student_enrolled_date": "2023-02-20"
+    },
+    {
+      "student_id": 3,
+      "student_name": "Jrald Baco",
+      "student_program": "BS - Information Technology",
+      "student_enrolled_date": "2023-03-10"
+    },
+    {
+      "student_id": 3,
+      "student_name": "Ken Jay Grave",
+      "student_program": "BS - Information Technology",
+      "student_enrolled_date": "2023-03-10"    }
+  ]
+  
