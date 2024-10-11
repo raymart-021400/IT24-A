@@ -26,3 +26,6 @@ filterCards(query) {
     });
 }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    new cardSearch('cardSearch', 'container1');
+});
