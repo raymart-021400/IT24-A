@@ -72,4 +72,17 @@ class WeatherApp {
             alert('Geolocation is not supported by this browser.');
         }
     }
+    
+    async getWeatherData(city) {
+        try {
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&units=metric`); // Fixed typo in URL
+            if (response.ok) {
+                return await response.json();
+            }
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+        }
+        return null;
+    }
+
 }
