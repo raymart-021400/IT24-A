@@ -46,4 +46,18 @@ class todoList{
                 this.todoList.children[this.editingIndex].querySelector('.task-text').textContent = taskText;
                 this.resetEditing();
             }
-}
+            removeTask(event) {
+                this.todoList.removeChild(event.target.closest('todo-item'));
+            }
+            editTask(event){
+                const taskItem = event.target.closest('todo-item');
+                this.todoInput.value = taskItem.querySelector(' .task-text').textContent;
+                this.editingIndex = Array.form(this.todoList.children).indexOf(taskItem);
+                this.addButton.textContent = 'Update' ;
+            }
+            resetEditing(){
+                this.editingIndex = -1;
+                this.addButton.textContent = 'Add';
+            }
+        }
+        
