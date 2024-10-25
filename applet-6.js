@@ -70,3 +70,4 @@ class todoList{
                 taskItem.appendChild(timestamp);
             }
         }
+        document.addEventListener('DOMContentLoaded', () => new todoList());
