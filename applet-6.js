@@ -1,10 +1,12 @@
 class TodoList {
     constructor() {
         this.editingIndex = -1;
+        this.clearButton = document.getElementById('clearButton');
         this.addButton = document.getElementById('addButton');
         this.todoInput = document.getElementById('todoInput');
         this.todoList = document.getElementById('todoList');
-
+        
+        this.clearButton.addEventListener('click', () => this.clearTasks());
         this.addButton.addEventListener('click', () => this.addOrUpdateTask());
         this.todoList.addEventListener('click', (e) => {
             const action = e.target.classList.contains('removeButton') ? 'remove' :
@@ -66,6 +68,11 @@ class TodoList {
         this.editingIndex = Array.from(this.todoList.children).indexOf(taskItem);
         this.addButton.textContent = 'Update';
     }
+
+
+clearTasks() {
+    this.todoList.innerHTML = '';
+}
 
     resetEditing() {
         this.editingIndex = -1;
