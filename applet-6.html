@@ -26,9 +26,15 @@
     #addButton{
         margin-top: 0.3rem;
         border-color: rgb(0, 0, 0);
+        margin-bottom: 1rem;
+    }
+    #clearButton{
+        margin-top: 0.3rem;
+        border-color: rgb(0, 0, 0);
+        margin-bottom: 1rem;
     }
     .CONTAINER{
-        margin-top: 2rem;
+        margin-top: 4rem;
         backdrop-filter: blur(10px);
         width: 80px;
         height:auto;
@@ -42,6 +48,7 @@
         text-decoration: line-through;
         color: gray;
     }
+    
 </style>
 </head>
 <nav class="navbar navbar-expand bg-primary"data-bs-theme="light">
@@ -80,10 +87,10 @@
     <div class="container-fluid" style="max-width: 40%;">
         <h2 class="text-center">To-Do List</h2>
         <div class="input-group mb-4">
-            <textarea class="form-control" style="border-radius: 10px;" id="todoInput" placeholder="Add a new task" rows="4"></textarea>
+            <textarea class="form-control" style="border-radius: 10px;" id="todoInput" placeholder="Add a new task" rows="3"></textarea>
             <div class="input-group-append" style="margin-left: .5rem;">
                 <button class="btn btn-primary" id="addButton"> Add</button>
-                <button class="btn btn-secondary" id="clearButton" style="margin-left: 0.5rem;">Clear</button>
+                <button class="btn btn-primary" id="clearButton">Clear</button>
             </div>
       </div>
             <ul id="todoList" class="list-group"></ul>
