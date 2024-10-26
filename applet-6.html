@@ -3,13 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+    <title>To-Do List</title>
+<style>
+    body{
+        background: url(https://static.vecteezy.com/system/resources/previews/021/598/688/original/gradient-smooth-blue-lines-background-free-vector.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .text-center{
+        color: rgb(255, 255, 255);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .font-control{
+        height: 3rem;
+        border-color: black;
+        margin-bottom: 1rem;
+    }
+    #addButton{
+        margin-top: 0.3rem;
+        border-color: rgb(0, 0, 0);
+        margin-bottom: 1rem;
+    }
+    #clearButton{
+        margin-top: 0.3rem;
+        border-color: rgb(0, 0, 0);
+        margin-bottom: 1rem;
+    }
+    .CONTAINER{
+        margin-top: 4rem;
+        backdrop-filter: blur(10px);
+        width: 80px;
+        height:auto;
+        margin-left: 7.5rem;
+        border-radius: 10px;
+        padding-top: 1rem;
+        box-shadow: 0 0 10px 10px rgba(247, 247, 247, 0.5);
+        padding-bottom: 0.3rem;
+    }
+    .completed{
+        text-decoration: line-through;
+        color: gray;
+    }
+    
+</style>
 </head>
-<body>
-    <nav class="navbar navbar-expand bg-primary"data-bs-theme="light">
+<nav class="navbar navbar-expand bg-primary"data-bs-theme="light">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,12 +83,19 @@
         </div>
       </div>
     </nav>
-
-  
-      <div id="studentList"  style="margin-left: 3.5rem;"></div>
-      <div id="studentSearchList" style="margin-left: 3.5rem;"></div>
-    
-      
+<body>
+    <div class="container-fluid" style="max-width: 40%;">
+        <h2 class="text-center">To-Do List</h2>
+        <div class="input-group mb-4">
+            <textarea class="form-control" style="border-radius: 10px;" id="todoInput" placeholder="Add a new task" rows="3"></textarea>
+            <div class="input-group-append" style="margin-left: .5rem;">
+                <button class="btn btn-primary" id="addButton"> Add</button>
+                <button class="btn btn-primary" id="clearButton">Clear</button>
+            </div>
+      </div>
+            <ul id="todoList" class="list-group"></ul>
+        </div>
+    </div>
 </body>
-<script src="applet-4.js"></script>
+<script src="./applet-6.js"></script>
 </html>
